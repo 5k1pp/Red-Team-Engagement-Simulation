@@ -16,8 +16,7 @@ A Red Team engagement that exposed Child and Parent Domain Controllers
 openvpn CCRTA-Exam-TCP4-4443-exam_operator-config.ovpn
 ```
 ## My Attacker IP Address: 172.16.250.4
-
-![Screenshot 2023-07-08 at 9.48.01 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47acf90f-d09d-4150-bf06-6133c8559749/Screenshot_2023-07-08_at_9.48.01_AM.png)
+![Screenshot 2023-07-08 at 9 48 01 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/c362d61d-db0d-44ce-a491-354a3e131b86)
 
 # Enumeration
 
