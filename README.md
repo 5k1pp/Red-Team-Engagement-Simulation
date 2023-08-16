@@ -192,7 +192,7 @@ nmap -sN 10.10.10.0/24
 ```
 ![Screenshot 2023-07-08 at 1 37 10 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/203038b8-7161-4a07-8640-1ee752993205)
 
-![Screenshot![Screenshot 2023-07-08 at 1 37 33 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7dfe5c22-bbcb-4615-b574-81ad19409c40)
+![Screenshot 2023-07-08 at 1 37 33 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7dfe5c22-bbcb-4615-b574-81ad19409c40)
 
 Found an IP range 10.10.10.1, 10.10.10.2, 10.10.10.3 and 10.10.10.4
 
