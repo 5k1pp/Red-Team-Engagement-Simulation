@@ -459,3 +459,20 @@ net user /domain
 ```
 ![Screenshot 2023-07-08 at 9 08 09 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/fe82d5ed-5a5b-4953-aa57-b7aab73a347f)
 
+## mimikatz.exe
+
+Now I will be using the mimikatz tool to extract more information connected to our compromised child-admin machine. Sending this to our compromised machine.
+
+![Screenshot 2023-07-08 at 9 13 55 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/78c319e9-b7d9-4af6-8ff6-df3d403f8286)
+![Screenshot 2023-07-08 at 9 14 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/12c6236f-600c-4ee7-a91d-9f30242e5d6f)
+
+
+Executes a mimikatz session. From the output, I only did get the SID of the child-admin and the NTLM Hash of RED-CHILDDC
+
+![Screenshot 2023-07-09 at 11 27 17 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5d90fe69-aee4-49bc-9ce0-f67cfcc238e2)
+
+## child-admin SID
+
+![Screenshot 2023-07-08 at 9 23 18 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/79ddadcd-25a0-4079-bba7-a75de29a4139)
+
+There is something missing in my enumeration approach. I forgot to use the powershell scripts.
