@@ -79,9 +79,7 @@ Since I couldn’t get any information on port 80, I moved to the service runnin
 
 ![Screenshot 2023-07-08 at 10.14.41 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d27b4b61-ad2f-403b-9a05-d23f52985095/Screenshot_2023-07-08_at_10.14.41_AM.png)
 
-| Vulnerability
- | System
- | CVSS Version 3.x | CVSS version 2.0 |
+| Vulnerability | System | CVSS Version 3.x | CVSS version 2.0 |
 | --- | --- | --- | --- |
 | CVE-2011-2523 vsftpd 2.3.4 | 172.16.25.2 | 9.8 Critical | 10.0 High |
 
