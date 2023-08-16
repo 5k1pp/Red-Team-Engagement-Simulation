@@ -214,3 +214,45 @@ Found an IP range 10.10.10.1, 10.10.10.2, 10.10.10.3 and 10.10.10.4
 | 10.10.10.5 | The compromised Production-Server (Ubuntu 8.04) |
 
 From our gathered IP ranges we moved on our first target which is 10.10.10.3
+
+## IP 10.10.10.3
+
+With the compromised Production-Server, I setup my proxychains at 1080 to be able to run commands directly from my machine without touching the Production-Server.
+
+![Screenshot 2023-07-09 at 8 32 11 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/2c72a5df-cf4c-4a84-be4b-74b13ba76e62)
+
+I run an nmap scan to 10.10.10.3 to find an open ports to attack with.
+
+```bash
+proxychains nmap -sV 10.10.10.3
+```
+
+![Screenshot 2023-07-09 at 7 51 11 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/3df08f03-cf8c-4f93-9825-773fcaf738b5)
+
+Again I run some nmap scan to it
+
+```bash
+proxychains nmap -sC -A 10.10.10.3
+```
+![Screenshot 2023-07-09 at 8 00 12 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7598a7ae-6ae0-4bfb-a90c-a42df934ee03)
+
+Found 4 open ports with 2 high ports in it. Based on the protocol assigned to this 2 open ports, looks like these are web applications.
+
+| Port | Description | Exploit |
+| --- | --- | --- |
+| 9090 | http / web application / Cockpit web service 162 - 188 | found some article related to its exploit |
+| 10000 | http / web application / MiniServ 1.953 (Webmin httpd) | Unable to find any exploit on this version |
+
+Before accessing these I setup a new proxy in firefox foxyproxy for port 1080
+
+![Screenshot 2023-07-09 at 7 54 27 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/44e0e34f-1896-4f46-9cde-fafd99685e5d)
+
+I will check what’s on these ports by navigating through the following urls:
+
+```bash
+http://10.10.10.3:9090
+http://10.10.10.4.10000
+```
+![Screenshot 2023-07-09 at 7 58 49 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/ae327810-17cb-4730-9d9d-290bdadbf33b)
+
+I found out that this url https://10.10.10.3:9090 is a server named Admin-System.
