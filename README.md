@@ -256,3 +256,51 @@ http://10.10.10.4.10000
 ![Screenshot 2023-07-09 at 7 58 49 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/ae327810-17cb-4730-9d9d-290bdadbf33b)
 
 I found out that this url https://10.10.10.3:9090 is a server named Admin-System.
+
+### Network Details
+
+| External IP Address | Description |
+| --- | --- |
+| 172.16.25.1 | Out of Scope |
+| 172.16.25.2 | Production-Server |
+| 172.16.25.3 | child.redteam.corp/Employee-System |
+| Internal IP Address | Description |
+| 10.10.10.1 | Reserved IP of the network |
+| 10.10.10.2 | we suspect this as the Domain Controller |
+| 10.10.10.3 | Admin-System |
+| 10.10.10.4 | unknown |
+| 10.10.10.5 | The compromised Production-Server (Ubuntu 8.04) |
+
+![Screenshot 2023-07-09 at 7 58 37 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/ed04f7d4-3fe9-43b5-9d33-0b7523e7771f)
+
+Both web services are running with TLS
+
+| IP URLs | Web Applications |
+| --- | --- |
+| https://10.10.10.3:9090 | Cockpit web service 162 - 188 |
+| https://10.10.10.3:10000 | MiniServ 1.953 (Webmin httpd) |
+
+I run several login attempts on both the web, the only credentials that works is the support user’s credentials I found from credential.txt.
+
+| UserID | Password |
+| --- | --- |
+| support | support@123 |
+
+I used these credentials and I was able to login to the Cockpit Web Service.
+
+![Screenshot 2023-07-08 at 3 52 15 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/46c225c6-8976-4626-95fc-e2b106d515b9)
+
+
+Navigating to through the web application, I found a terminal tab
+
+## Admin-System
+
+Do some enumeration on this machine
+
+![Screenshot 2023-07-09 at 9 01 55 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7d38835c-3087-4f76-a9c1-5249ce04c22e)
+
+Looking into the terminal and execute some commands. I found out some interesting files inside the home directory of admin-sys. Interestingly I found a child-admin.keytab. From my research, A keytab is a file containing pairs of Kerberos principals and encrypted keys that are derived from the Kerberos password. You can use this file to log on to Kerberos without being prompted for a password.
+
+![Screenshot 2023-07-09 at 9 03 57 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/e908bce3-3b32-4af4-b7d6-0fc1c3308085)
+
+Back to the terminal and try to look for some interesting files.
