@@ -55,7 +55,6 @@ nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 ```
 
 We found 4 open ports and validates that this is windows machine where port 3389 
-
-![Screenshot 2023-07-08 at 10.04.54 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d33c320-749b-46df-8070-da34f3edb138/Screenshot_2023-07-08_at_10.04.54_AM.png)
+![Screenshot 2023-07-08 at 10 04 54 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7d0f1ee4-c0da-4bac-bfe2-92f8661fc69d)
 
 I will get back to this later, while I proceed on IP 172.16.25.2
