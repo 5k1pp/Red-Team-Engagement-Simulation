@@ -304,3 +304,27 @@ Looking into the terminal and execute some commands. I found out some interestin
 ![Screenshot 2023-07-09 at 9 03 57 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/e908bce3-3b32-4af4-b7d6-0fc1c3308085)
 
 Back to the terminal and try to look for some interesting files.
+
+## krb5.keytab
+
+Using the klist tool, found lots of entries **in the local credentials cache and key table.**
+
+```bash
+klist -k /etc/krb5.keytab
+```
+![Screenshot 2023-07-08 at 4 29 24 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/442bc25d-999d-4b8e-b4e3-fbc098255569)
+
+Found 2 interesting credentials:
+
+| Credentials |
+| --- |
+| administrator@CHILD.REDTEAM.CORP |
+| Admin-System@CHILD.REDTEAM.CORP |
+
+![Screenshot 2023-07-08 at 4 30 05 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5f42b942-0721-497e-93e0-18bc07617291)
+
+Back to our admin-sys directory, I was able to get to root access.
+
+![Screenshot 2023-07-09 at 9 12 11 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/06dc119b-50aa-4693-87b9-65a79a6700d9)
+
+From my research, I can able to read the content of the child-admin.keytab using the tool KeyTabExtract.py. This means we need to download this keytab file.
