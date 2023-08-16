@@ -28,7 +28,7 @@ nmap -sn 172.16.25.0/24 > ./Findings/nmap_172-16-25-0_24.txt
 
 And resulted me to 3 IP Addresses
 
-![Screenshot 2023-07-08 at 10.02.27 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4fd37c2e-ff88-484a-b8b1-532b892fa67c/Screenshot_2023-07-08_at_10.02.27_AM.png)
+![Screenshot![Screenshot 2023-07-08 at 10 02 27 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/f4b1128b-60cf-4940-a21a-36e06540e8d6)
 
 ### Network Details
 
