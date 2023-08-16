@@ -105,3 +105,27 @@ python -c "import pty;pty.spawn('bin/bash')"
 ```
 
 I got a root shell under the host-name Production-Server
+
+## Production-Server
+
+![we got a root shell of Production-Server](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/553a0d4b-e351-465f-add2-61fef4f21f76/Screenshot_2023-06-28_at_10.26.54_AM.png)
+
+we got a root shell of Production-Server
+
+From here I checked the /etc/passwd to check some interesting credentials
+
+```bash
+cat /etc/passwd
+```
+
+![Screenshot 2023-07-08 at 12.40.06 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/37db5865-c10d-464e-9ded-6cbb0fc79b60/Screenshot_2023-07-08_at_12.40.06_PM.png)
+
+I found a a familiar credential
+
+```bash
+msfadmin:x:1000:1000:msfadmin,,,:/home/msfadmin:/bin/bash
+```
+
+I look around to gather more interesting information. I found another user named “prod-admin”.
+
+![Screenshot 2023-07-08 at 12.46.22 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7abc69fc-3563-4b3e-921e-8278c3ab3b95/Screenshot_2023-07-08_at_12.46.22_PM.png)
