@@ -89,10 +89,9 @@ Using metasploit, We look on possible use of the  vsftpd 2.3.4 service vulnerabi
 I found an exploit for vsftpd 2.3.4 which is a Backdoor Command Execution and can be used to the target machine. Selecting the module - exploit/unix/ftp/vsftpd_234_backdoor, and the setting up the following:
 
 RHOSTS: 172.16.25.2
-
 verbose: True
-![Screenshot 2023-07-08 at 12 34 13 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/12289f49-0fef-4bfb-b606-8c930d4849ae)
 
+![Screenshot 2023-07-08 at 12 34 13 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/12289f49-0fef-4bfb-b606-8c930d4849ae)
 ![Screenshot 2023-07-08 at 12 32 16 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/85d66a19-cd8e-4bdf-878c-2ca84995d926)
 
 
