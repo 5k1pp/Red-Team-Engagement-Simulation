@@ -107,8 +107,7 @@ python -c "import pty;pty.spawn('bin/bash')"
 I got a root shell under the host-name Production-Server
 
 ## Production-Server
-
-![Screenshot 2023-07-08 at 12 46 22 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/68f0982f-50f5-4de1-a007-195a95be7688)
+![Screenshot 2023-06-28 at 10 26 54 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/97d6cd96-e1cf-40ea-bbd1-7f6b50188946)
 
 we got a root shell of Production-Server
 
@@ -117,8 +116,8 @@ From here I checked the /etc/passwd to check some interesting credentials
 ```bash
 cat /etc/passwd
 ```
+![Screenshot 2023-07-08 at 12 40 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/20e0ba04-b946-4db0-b5d4-e728f6129ff4)
 
-![Screenshot 2023-![Screenshot 2023-07-08 at 12 40 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/79ac7026-5bba-45db-b326-dee466621cc3)
 
 I found a a familiar credential
 
@@ -128,5 +127,6 @@ msfadmin:x:1000:1000:msfadmin,,,:/home/msfadmin:/bin/bash
 
 I look around to gather more interesting information. I found another user named “prod-admin”.
 
-![Screenshot 2023-07-08 at 12![Screenshot 2023-07-08 at 12 46 22 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5e66ebfc-c9b4-4e93-80b2-92cd1b27fa50)
+![Screenshot 2023-07-08 at 12 46 22 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/70ab05d3-f736-4627-89f7-e0faa4aa9423)
+
 
