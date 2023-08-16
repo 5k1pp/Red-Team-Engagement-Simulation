@@ -9,7 +9,7 @@ A Red Team engagement that exposed Child and Parent Domain Controllers
 
 ### Objective:
 
-1. To pivot through a network by compromising a public facing web machine and tunnelling your traffic to access other machines in the network.
+1. To pivot through a network by compromising a public facing web machine and tunnelling our traffic to access other machines in the network.
 2. To reach the highest (**root/administrator**) level command execution.
 3. To compromise the Child and Parent Domain
 
