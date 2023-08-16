@@ -1,11 +1,9 @@
 # Red-Team-Simulation-1
-A Red Team engagement that exposed Child and Parent Domain Controllers
+A Red Team engagement that exposes Child and Parent Domain Controllers
 
 ### **Initial Access SCOPE of Engagement :**
 
 ## **[172.16.25.0/24](http://172.16.25.0/24) [ONLY 172.16.25.1 is out of scope]**
-
-### Objective:
 
 ### Objective:
 
