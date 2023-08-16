@@ -43,3 +43,19 @@ Enumerating 172.16.25.2 using nmap scan, and had 22 open ports
 ```bash
 nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 ```
+## 172.16.25.2
+![Screenshot 2023-07-08 at 10 08 45 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/0abb9949-5de9-45a0-a1a8-28b95dab850c)
+![Screenshot 2023-07-08 at 10 09 23 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/9471722f-34b3-4bc3-bb7a-ecde9ccb7189)
+![Screenshot 2023-07-08 at 10 09 51 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/d5229108-4ded-454b-8b1b-112133ff6e44)
+
+## 172.16.25.3
+
+```bash
+nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
+```
+
+We found 4 open ports and validates that this is windows machine where port 3389 
+
+![Screenshot 2023-07-08 at 10.04.54 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d33c320-749b-46df-8070-da34f3edb138/Screenshot_2023-07-08_at_10.04.54_AM.png)
+
+I will get back to this later, while I proceed on IP 172.16.25.2
