@@ -476,3 +476,23 @@ Executes a mimikatz session. From the output, I only did get the SID of the chil
 ![Screenshot 2023-07-08 at 9 23 18 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/79ddadcd-25a0-4079-bba7-a75de29a4139)
 
 There is something missing in my enumeration approach. I forgot to use the powershell scripts.
+
+## PowerView-Dev.ps1
+
+Sending the copy of PowerView-Dev.ps1 to the compromised Domain Controller.
+
+![Screenshot 2023-07-08 at 9 33 14 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/cd63f4c3-8882-455b-bcfb-2f655d57398c)
+![Screenshot 2023-07-08 at 9 33 02 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/af5137c3-7eb1-472b-b9d3-08810777ec3d)
+
+Initiating the powershell and do the bypass
+
+```bash
+powershell -ep bypass
+Get-Netcomputer | Select-Object cn
+```
+
+Found 4 machines connected to the domain controller.
+
+![Screenshot 2023-07-08 at 9 40 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/aaee5b8e-c061-4db2-9818-0b698f015f82)
+
+Back to mimikatz again. Using the SID of the child-admin and NTLM of the krbtgt, I will be forging my golden ticket to be able to access the domain controller fully.
