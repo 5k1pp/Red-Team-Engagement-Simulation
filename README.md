@@ -15,3 +15,32 @@ A Red Team engagement that exposed Child and Parent Domain Controllers
 ```bash
 openvpn CCRTA-Exam-TCP4-4443-exam_operator-config.ovpn
 ```
+## My Attacker IP Address: 172.16.250.4
+
+![Screenshot 2023-07-08 at 9.48.01 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47acf90f-d09d-4150-bf06-6133c8559749/Screenshot_2023-07-08_at_9.48.01_AM.png)
+
+# Enumeration
+
+Enumerating the given IP Ranges
+
+```bash
+nmap -sn 172.16.25.0/24 > ./Findings/nmap_172-16-25-0_24.txt
+```
+
+And resulted me to 3 IP Addresses
+
+![Screenshot 2023-07-08 at 10.02.27 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4fd37c2e-ff88-484a-b8b1-532b892fa67c/Screenshot_2023-07-08_at_10.02.27_AM.png)
+
+### Network Details
+
+| External IP Address | Remarks | Description |
+| --- | --- | --- |
+| 172.16.25.1 | Out of Scope |  |
+| 172.16.25.2 | 22 open ports | Production-Server |
+| 172.16.25.3 | 4 open ports (with no port 80), but with RDP port open | child.redteam.corp/Employee-System |
+
+Enumerating 172.16.25.2 using nmap scan, and had 22 open ports
+
+```bash
+nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
+```
