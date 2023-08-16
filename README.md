@@ -174,3 +174,41 @@ So far this is the summary of what I got from the root directory enumeration of 
 | prod-admin | found credential.txt | Support User Credential = support:support@123 and Prod-admin Credential = prod-admin:Pr0d!@#$% |
 | service | nothing interesting |  |
 | user | nothing interesting |  |
+
+# Pivoting
+
+## IP 10.10.10.5 : Production-Server
+
+Moving on, I conduct an initial enumeration inside the compromised Production-Server
+
+Run a network card enumeration and found its internal ip address. Do a ping test on it and it is active.
+
+![Screenshot 2023-07-08 at 1.03.52 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b11d849-38d1-41a4-9ffa-0ed0c0909244/Screenshot_2023-07-08_at_1.03.52_PM.png)
+
+Surprisingly nmap is working on the production server, I scanned the network to look for an ip range
+
+```bash
+nmap -sN 10.10.10.0/24
+```
+
+![Screenshot 2023-07-08 at 1.37.10 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3d8046d-2882-4ed9-995e-86747d7996d9/Screenshot_2023-07-08_at_1.37.10_PM.png)
+
+![Screenshot 2023-07-08 at 1.37.33 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d59ed276-c4e1-4313-80b1-2c53a40b64a9/Screenshot_2023-07-08_at_1.37.33_PM.png)
+
+Found an IP range 10.10.10.1, 10.10.10.2, 10.10.10.3 and 10.10.10.4
+
+### Network Details
+
+| External IP Address | Description |
+| --- | --- |
+| 172.16.25.1 | Out of Scope |
+| 172.16.25.2 | Production-Server |
+| 172.16.25.3 | child.redteam.corp/Employee-System |
+| Internal IP Address | Description |
+| 10.10.10.1 | Reserved IP of the network |
+| 10.10.10.2 | we suspect this as the Domain Controller |
+| 10.10.10.3 | unknown |
+| 10.10.10.4 | unknown |
+| 10.10.10.5 | The compromised Production-Server (Ubuntu 8.04) |
+
+From our gathered IP ranges we moved on our first target which is 10.10.10.3
