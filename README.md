@@ -7,8 +7,11 @@ A Red Team engagement that exposed Child and Parent Domain Controllers
 
 ### Objective:
 
-1. The goal of the challenge is to exfiltrate the file "**secret.xml**" placed in one of the end servers, all the steps must be documented in a **PDF report.**
-2. You must get the highest (**root/administrator**) level command execution in order to pass the examination
+### Objective:
+
+1. To pivot through a network by compromising a public facing web machine and tunnelling your traffic to access other machines in the network.
+2. To reach the highest (**root/administrator**) level command execution.
+3. To compromise the Child and Parent Domain
 
 ### Executing my .ovpn exam environment
 
