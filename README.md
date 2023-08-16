@@ -579,3 +579,14 @@ Now we completed our enumeration as follows.
 # Conclusion
 
 The red team engagement has shown that an external attacker can gain an initial foothold to the network by exploiting the public facing server (172.16.25.2). From there an attacker can compromise the entire network.
+
+# Mitigation
+
+1. Mitigating vulnerabilities and addressing outdated system patches is crucial to maintaining a secure environment. Remember that vulnerabilities are a common part of the IT landscape, but proactive and effective management can significantly reduce the risk they pose. Regularly review and adapt your mitigation strategies based on changes in your environment, emerging threats, and new technologies. On this case, the Production-Server [172.16.25.2]
+
+| Vulnerability
+ | System
+ | CVSS Version 3.x | CVSS version 2.0 |
+| --- | --- | --- | --- |
+| CVE-2011-2523 vsftpd 2.3.4 | 172.16.25.2 | 9.8 Critical | 10.0 High |
+1. Hardening Windows defenses against tools like Mimikatz and techniques associated with LOLBAS (Living Off The Land Binaries and Scripts) is crucial for improving the security of the systems. These tools and techniques are often used by attackers to compromise systems and gain unauthorized access to sensitive information.
