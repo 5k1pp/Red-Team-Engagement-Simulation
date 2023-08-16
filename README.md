@@ -11,11 +11,6 @@ A Red Team engagement that exposes Child and Parent Domain Controllers
 2. To reach the highest (**root/administrator**) level command execution.
 3. To compromise the Child and Parent Domain
 
-### Executing my .ovpn exam environment
-
-```bash
-openvpn CCRTA-Exam-TCP4-4443-exam_operator-config.ovpn
-```
 ## My Attacker IP Address: 172.16.250.4
 ![Screenshot 2023-07-08 at 9 48 01 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/c362d61d-db0d-44ce-a491-354a3e131b86)
 
