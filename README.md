@@ -1,5 +1,5 @@
-# Red-Team-Simulation-1
-A Red Team engagement that exposes Child and Parent Domain Controllers
+# Red Team Engagement Simulation
+A Red Team Engagement is a cybersecurity exercise designed to simulate real-world attacks and security breaches on an organization's systems, networks, and applications. The primary goal of a red team engagement is to identify vulnerabilities, weaknesses, and potential points of exploitation within an organization's defenses.
 
 ### **Initial Access SCOPE of Engagement :**
 
