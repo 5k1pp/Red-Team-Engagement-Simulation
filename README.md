@@ -315,11 +315,11 @@ Found 2 interesting credentials:
 | administrator@CHILD.REDTEAM.CORP |
 | Admin-System@CHILD.REDTEAM.CORP |
 
-![Screenshot 2023-07-08 at 4 30 05 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5f42b942-0721-497e-93e0-18bc07617291)
+![Screenshot 2023-07-08 at 4 30 05 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/10568ef6-5f57-43ee-9da2-36c750b4ea51)
 
 Back to our admin-sys directory, I was able to get to root access.
 
-![Screenshot 2023-07-09 at 9 12 11 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/06dc119b-50aa-4693-87b9-65a79a6700d9)
+![Screenshot 2023-07-09 at 9 12 11 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/81f1d191-b8e1-44cd-89b4-acc48c90231f)
 
 From my research, I can able to read the content of the child-admin.keytab using the tool KeyTabExtract.py. This means we need to download this keytab file.
 
@@ -328,13 +328,13 @@ From my research, I can able to read the content of the child-admin.keytab using
 ```bash
 scp child-admin.keytab USER@172.16.250.4:child-admin.keytab
 ```
-![Screenshot 2023-07-09 at 9 54 22 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/c92808b4-e0a1-4701-bbbc-37a88e94c680)
+![Screenshot 2023-07-09 at 9 54 22 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/2ea8a654-b1ff-4420-a96a-e7e31dfdbd81)
 
 ## KeyTabExtract.py
 
 KeyTabExtract is a little utility to help extract valuable information from 502 type .keytab files, which may be used to authenticate Linux boxes to Kerberos. The script will extract information such as the realm, Service Principal, Encryption Type and NTLM Hash.
 
-![Screenshot 2023-07-08 at 5 35 41 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7a04ef7e-6661-4d39-87c6-14d6eae11fbb)
+![Screenshot 2023-07-08 at 5 35 41 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/a01b79ac-abf4-49bd-a96b-964888f6d617)
 
 ## child-admin NTLM HASH
 
