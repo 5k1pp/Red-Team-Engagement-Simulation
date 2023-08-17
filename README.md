@@ -134,14 +134,14 @@ I look around to gather more interesting information. I found another user named
 
 I navigate to home root directory and found 5 users folders. And look to the prod-admin folder and found a file named “credential.txt”
 
-![Screenshot 2023-07-08 at 12 48 49 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/6ee39fc7-9280-4af2-add2-2487c8519ab9)
+![Screenshot 2023-07-08 at 12 48 49 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/3a4bfbd4-66fc-4558-94d3-bb71ebf1025f)
 
 ```bash
 cd prod-admin
 ls
 cat credential.txt
 ```
-![Screenshot 2023-07-08 at 12 49 43 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/90889d99-bbe2-4146-ab62-676c30f779da)
+![Screenshot 2023-07-08 at 12 49 43 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/8fc23420-c34e-4596-9801-e614974d3289)
 
 2 interesting credentials
 
@@ -155,15 +155,14 @@ First, I try to login using the 1st credential - support:support@123. It doesn�
 ```bash
 ssh support@172.16.25.2
 ```
-
-![Screenshot 2023-07-08 at 12 56 23 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/ef1d2b75-0691-4725-968a-80de57760c7c)
+![Screenshot 2023-07-08 at 12 56 23 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/14485c50-b23e-4913-ac42-c8bb0ad5b2e5)
 
 Next, I go with trying the 2nd credential - prod-admin:Pr0d!@#$%. It does work
 
 ```bash
 ssh prod-admin@172.16.25.2
 ```
-![Screenshot 2023-07-08 at 12 59 25 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/a9a7faf2-a6df-4f50-b16e-dece94b8ce59)
+![Screenshot 2023-07-08 at 12 59 25 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/669d3e8a-7384-4011-96b1-1157c0ccae8b)
 
 So far this is the summary of what I got from the root directory enumeration of the Production-Server.
 
