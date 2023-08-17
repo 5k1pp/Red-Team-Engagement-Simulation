@@ -239,7 +239,7 @@ Found 4 open ports with 2 high ports in it. Based on the protocol assigned to th
 
 Before accessing these I setup a new proxy in firefox foxyproxy for port 1080
 
-![Screenshot 2023-07-09 at 7 54 27 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/44e0e34f-1896-4f46-9cde-fafd99685e5d)
+![Screenshot 2023-07-09 at 7 54 27 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/974148fd-6ee2-40e2-a2ab-1b6388031523)
 
 I will check what’s on these ports by navigating through the following urls:
 
@@ -247,7 +247,7 @@ I will check what’s on these ports by navigating through the following urls:
 http://10.10.10.3:9090
 http://10.10.10.4.10000
 ```
-![Screenshot 2023-07-09 at 7 58 49 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/ae327810-17cb-4730-9d9d-290bdadbf33b)
+![Screenshot 2023-07-09 at 7 58 49 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/2ba75625-a984-456a-9c3a-5d1af1827483)
 
 I found out that this url https://10.10.10.3:9090 is a server named Admin-System.
 
@@ -265,7 +265,7 @@ I found out that this url https://10.10.10.3:9090 is a server named Admin-System
 | 10.10.10.4 | unknown |
 | 10.10.10.5 | The compromised Production-Server (Ubuntu 8.04) |
 
-![Screenshot 2023-07-09 at 7 58 37 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/ed04f7d4-3fe9-43b5-9d33-0b7523e7771f)
+![Screenshot 2023-07-09 at 7 58 37 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/d8b170b8-f132-461c-8f16-5795be7983b4)
 
 Both web services are running with TLS
 
