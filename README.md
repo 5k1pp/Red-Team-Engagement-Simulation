@@ -291,11 +291,11 @@ Navigating to through the web application, I found a terminal tab
 
 Do some enumeration on this machine
 
-![Screenshot 2023-07-09 at 9 01 55 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7d38835c-3087-4f76-a9c1-5249ce04c22e)
+![Screenshot 2023-07-09 at 9 01 55 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/f61ece25-d635-4ad3-b64e-88a3f6b15a20)
 
 Looking into the terminal and execute some commands. I found out some interesting files inside the home directory of admin-sys. Interestingly I found a child-admin.keytab. From my research, A keytab is a file containing pairs of Kerberos principals and encrypted keys that are derived from the Kerberos password. You can use this file to log on to Kerberos without being prompted for a password.
 
-![Screenshot 2023-07-09 at 9 03 57 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/e908bce3-3b32-4af4-b7d6-0fc1c3308085)
+![Screenshot 2023-07-09 at 9 03 57 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/f378206d-c675-4720-b613-c6409b318067)
 
 Back to the terminal and try to look for some interesting files.
 
@@ -306,7 +306,7 @@ Using the klist tool, found lots of entries **in the local credentials cache and
 ```bash
 klist -k /etc/krb5.keytab
 ```
-![Screenshot 2023-07-08 at 4 29 24 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/442bc25d-999d-4b8e-b4e3-fbc098255569)
+![Screenshot 2023-07-08 at 4 29 24 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/eff23401-7f79-4aca-9341-1579e1997d33)
 
 Found 2 interesting credentials:
 
