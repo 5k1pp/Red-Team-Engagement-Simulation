@@ -39,9 +39,10 @@ Enumerating 172.16.25.2 using nmap scan, and had 22 open ports
 nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 ```
 ## 172.16.25.2
-![Screenshot 2023-07-08 at 10 08 45 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/0abb9949-5de9-45a0-a1a8-28b95dab850c)
-![Screenshot 2023-07-08 at 10 09 23 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/9471722f-34b3-4bc3-bb7a-ecde9ccb7189)
-![Screenshot 2023-07-08 at 10 09 51 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/d5229108-4ded-454b-8b1b-112133ff6e44)
+
+![Screenshot 2023-07-08 at 10 02 27 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/fe4dd490-0658-4355-8403-08f546cc2f34)
+![Screenshot 2023-07-08 at 10 08 45 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/4c4551c8-519e-4869-ab52-0d5f99820661)
+![Screenshot 2023-07-08 at 10 09 23 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/a2053f05-b7b3-47bd-a1b5-d825adb2f1b0)
 
 ## 172.16.25.3
 
