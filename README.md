@@ -282,7 +282,7 @@ I run several login attempts on both the web, the only credentials that works is
 
 I used these credentials and I was able to login to the Cockpit Web Service.
 
-![Screenshot 2023-07-08 at 3 52 15 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/46c225c6-8976-4626-95fc-e2b106d515b9)
+![Screenshot 2023-07-08 at 3 52 15 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/b838ab2c-d796-4632-80d9-3e94fe6fc898)
 
 
 Navigating to through the web application, I found a terminal tab
