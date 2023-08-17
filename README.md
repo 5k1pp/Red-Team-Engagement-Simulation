@@ -468,7 +468,7 @@ Executes a mimikatz session. From the output, I only did get the SID of the chil
 
 ## child-admin SID
 
-![Screenshot 2023-07-08 at 9 23 18 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/79ddadcd-25a0-4079-bba7-a75de29a4139)
+![Screenshot 2023-07-08 at 9 23 18 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/133dba18-af3e-4c3b-bff2-2c17efe3e109)
 
 There is something missing in my enumeration approach. I forgot to use the powershell scripts.
 
