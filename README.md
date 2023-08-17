@@ -94,7 +94,8 @@ verbose: True
 ![Screenshot 2023-07-08 at 12 34 13 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/529f7fea-a8e4-481c-ae0a-12601a93de40)
 
 Executing the exploit and a shell session was created, but this is not a interactive shell
-![Screenshot 2023-07-08 at 12 35 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/e90ebfff-f2db-4298-af96-4ab0ca80cef6)
+
+![Screenshot 2023-07-08 at 12 35 08 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/14b01967-a3c3-44ef-b884-f2cb2da90ec2)
 
 To have a interactive shell, I execute a terminal (tty) spawned via Python
 
