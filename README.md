@@ -23,7 +23,7 @@ nmap -sn 172.16.25.0/24 > ./Findings/nmap_172-16-25-0_24.txt
 
 And resulted me to 3 IP Addresses
 
-![Screenshot 2023-07-08 at 9 48 01 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/1c814cb3-de1a-40ff-8c80-d9fe62e0d829)
+![Screenshot 2023-07-08 at 10 02 27 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/8ff9fa26-3482-458a-a0fa-9b08e3bf6715)
 
 ### Network Details
 
@@ -39,10 +39,11 @@ Enumerating 172.16.25.2 using nmap scan, and had 22 open ports
 nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 ```
 ## 172.16.25.2
+![Screenshot 2023-07-08 at 10 08 45 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/558eb85f-3f68-4907-8501-e64dc5576d5d)
+![Screenshot 2023-07-08 at 10 09 23 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/311127c7-9aef-4273-9cd8-8ecaf72b8fcc)
+![Screenshot 2023-07-08 at 10 09 51 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/6e9fbae0-5269-478e-8a79-90547e17fb00)
 
-![Screenshot 2023-07-08 at 10 02 27 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/fe4dd490-0658-4355-8403-08f546cc2f34)
-![Screenshot 2023-07-08 at 10 08 45 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/4c4551c8-519e-4869-ab52-0d5f99820661)
-![Screenshot 2023-07-08 at 10 09 23 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/a2053f05-b7b3-47bd-a1b5-d825adb2f1b0)
+
 
 ## 172.16.25.3
 
@@ -52,9 +53,7 @@ nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 
 We found 4 open ports and validates that this is windows machine where port 3389
 
-![Screenshot 2023-07-08 at 10 09 51 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/cd080217-808f-470e-b1fe-e2c0dfa427d7)
-
-![Screenshot 2023-07-08 at 10 04 54 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7d0f1ee4-c0da-4bac-bfe2-92f8661fc69d)
+![Screenshot 2023-07-08 at 10 04 54 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/eb440e19-7a5e-4cb3-845a-ff24d2683664)
 
 I will get back to this later, while I proceed on IP 172.16.25.2
 
