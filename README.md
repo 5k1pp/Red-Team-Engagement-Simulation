@@ -50,7 +50,10 @@ nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 nmap -A -sV -sT 172.16.25.3 > ./Findings/nmap_172-16-25-3.txt
 ```
 
-We found 4 open ports and validates that this is windows machine where port 3389 
+We found 4 open ports and validates that this is windows machine where port 3389
+
+![Screenshot 2023-07-08 at 10 09 51 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/cd080217-808f-470e-b1fe-e2c0dfa427d7)
+
 ![Screenshot 2023-07-08 at 10 04 54 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7d0f1ee4-c0da-4bac-bfe2-92f8661fc69d)
 
 I will get back to this later, while I proceed on IP 172.16.25.2
