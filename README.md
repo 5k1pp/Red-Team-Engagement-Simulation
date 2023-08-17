@@ -60,14 +60,13 @@ I will get back to this later, while I proceed on IP 172.16.25.2
 ## port 80 at 172.16.25.2
 
 since port 80 is open, I look at http://172.16.25.2, a Registration page for Red Team Lab
+![Screenshot 2023-06-28 at 9 32 04 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/4adf7b8a-9eb4-4b8c-bbeb-70e83c897a6d)
 
-![Screenshot 2023-06-28 at 9 32 04 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/671daaca-c974-4258-a7ae-257fbd4f1307)
+I tried the registration but it give us an error
 
-I tried the registration but it give us an error 
+![Screenshot 2023-06-28 at 10 13 38 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/d87d5ec4-8c5a-4c0a-819e-a138207c2e6d)
+![Screenshot 2023-07-08 at 10 13 21 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/7add6faa-2133-41d2-a339-2b309e5fb9fb)
 
-![Screenshot 2023-06-28 at 10 13 38 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/344afbb0-1575-43d3-ae7b-6ee68400c194)
-
-![Screenshot 2023-07-08 at 10 13 21 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/91e3e2ad-abd0-440f-9218-5d61302bcc68)
 
 error after the registration
 
