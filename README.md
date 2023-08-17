@@ -182,16 +182,15 @@ Moving on, I conduct an initial enumeration inside the compromised Production-Se
 
 Run a network card enumeration and found its internal ip address. Do a ping test on it and it is active.
 
-![Screenshot 2023-07-08 at 1 03 52 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/891ac41e-7f77-4887-aac0-243500fb2672)
+![Screenshot 2023-07-08 at 1 03 52 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/750290d7-06ad-4959-b8d1-418b52f7fcd8)
 
 Surprisingly nmap is working on the production server, I scanned the network to look for an ip range
 
 ```bash
 nmap -sN 10.10.10.0/24
 ```
-![Screenshot 2023-07-08 at 1 37 10 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/203038b8-7161-4a07-8640-1ee752993205)
-
-![Screenshot 2023-07-08 at 1 37 33 PM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7dfe5c22-bbcb-4615-b574-81ad19409c40)
+![Screenshot 2023-07-08 at 1 37 10 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/a173db41-300c-45e2-8c0c-5ef6d1c7b495)
+![Screenshot 2023-07-08 at 1 37 33 PM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/c9039b22-a9d0-49b5-a42f-95bdb4eed595)
 
 Found an IP range 10.10.10.1, 10.10.10.2, 10.10.10.3 and 10.10.10.4
 
@@ -215,22 +214,21 @@ From our gathered IP ranges we moved on our first target which is 10.10.10.3
 
 With the compromised Production-Server, I setup my proxychains at 1080 to be able to run commands directly from my machine without touching the Production-Server.
 
-![Screenshot 2023-07-09 at 8 32 11 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/2c72a5df-cf4c-4a84-be4b-74b13ba76e62)
+![Screenshot 2023-07-09 at 8 32 11 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/f05c1a55-24f8-43ea-af68-d47a23eb66fb)
 
 I run an nmap scan to 10.10.10.3 to find an open ports to attack with.
 
 ```bash
 proxychains nmap -sV 10.10.10.3
 ```
-
-![Screenshot 2023-07-09 at 7 51 11 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/3df08f03-cf8c-4f93-9825-773fcaf738b5)
+![Screenshot 2023-07-09 at 7 51 11 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/c2d3bde0-1c77-4817-bad0-1677aeca6d4a)
 
 Again I run some nmap scan to it
 
 ```bash
 proxychains nmap -sC -A 10.10.10.3
 ```
-![Screenshot 2023-07-09 at 8 00 12 AM](https://github.com/JFPineda79/Red-Team-Simulation-1/assets/96193551/7598a7ae-6ae0-4bfb-a90c-a42df934ee03)
+![Screenshot 2023-07-09 at 8 00 12 AM](https://github.com/JFPineda79/Red-Team-Engagement-Simulation/assets/96193551/1f56806f-56b4-4fe1-ab9f-0956d1803a2c)
 
 Found 4 open ports with 2 high ports in it. Based on the protocol assigned to this 2 open ports, looks like these are web applications.
 
